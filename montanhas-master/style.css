@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.montanhas{
+    max-width: 1200px;
+    min-height:300px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: visible;
+    transition: height 3s ease-in-out;
+}
+
+
+
+.montanhas__title{
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.menu__itens{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    gap:40px;
+    color: green;
+    padding: 3em;
+}
+
+.menu__item{
+    border: 4px solid green;
+    padding: 4px 52px;
+    font-weight: bold;
+}
+
+.menu__item:hover{
+    color: white;
+    background: green;
+    cursor: pointer;
+}
+
+/* descrição */
+
+.montanhas_artigos{
+    max-width: 800px;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+}
+
+.artigos--remove{
+    display: none;
+}
+
+.artigo__img{
+    position: absolute;
+    left: 0;
+}
+
+.img{
+    width: 100%;
+}
+
+.artigos__descricao{
+    flex: 1 0 360px;
+
+}
+
+.artigo_title{
+    padding: 20px;
+}
+
+.artigo__texto{
+    box-shadow: 2px 0px 20px -4px #ccc;
+    width: 500px;
+    margin: 0px 10px 80px 230px;
+    padding: 30px 40px 30px 120px;
+    text-align: justify;
+}
+
+.animacao-Ativa{
+    animation: trocar 3s normal;
+}
+
+@keyframes trocar{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+/* mobilie */
+
+@media screen and (max-width: 360px){
+    .montanhas{
+        max-width: 360px;
+    }
+
+    .montanhas__title{
+        font-size: 1.5em;
+        margin: 20px 0;
+    }
+
+    .menu__itens{
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 0;
+    }
+
+    .montanhas_artigos{
+        display: block;
+        position: initial;
+        width: 320px;
+    }
+
+    .artigo__img{
+        position: inherit;
+    }
+
+    .artigo_title{
+        font-size: 1.5em;
+    }
+
+    .artigo__texto{
+        width: 320px;
+        margin: 10px 0;
+        padding: 20px 10px;
+    }
+}

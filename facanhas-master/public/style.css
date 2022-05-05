@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sobre{
+    background-image: url(apresentacao.jpg);
+    min-height: 250px;
+    height: 450px;
+    position: relative;
+}
+
+.sobre .sobre_sombra{
+    background-color: rgba(51, 255, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_info{
+    background-color: white;
+    width: 55%;
+    margin: 0 auto;
+    position: absolute;
+    margin-top: 118px;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: 1fr 15%;
+    grid-template-areas: 'a b' 'c c' ;
+
+}
+
+h1{
+    font-size: 24px;
+}
+
+.card_info .img{
+    width: 100%;
+}
+
+.card_info_dados{
+    width: 100%;
+    padding: 60px;
+}
+
+.card_info_dados h1{
+    font-weight: 500;
+}
+
+.card_info_dados > h3{
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 4px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.card_info_dados .info{
+    padding-top: 16px;
+}
+
+.card_info_dados .info h3{
+    font-size: 12px;
+}
+
+.card_info_dados .info p{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    padding-top: 8px;
+}
+
+.card_info_dados .info p:nth-child(3) {
+    padding-top: 4px;
+}
+
+.social{
+    grid-area: c;
+    font-size: 20px;
+    background-color: rgb(15, 138, 6);
+    display: flex;
+    align-items: center; 
+}
+
+.social ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social li {
+    display: inline-block;
+    padding: 0 12px;
+}
+
+.social li a {
+    color: white;
+    text-decoration: none;
+}
+/* repositorio */
+
+.l-layout{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    gap: 20px;
+    background-color: aqua;
+    align-content: stretch;
+}
+
+.card:first-child{
+    display: none;
+}
+
+.card{
+    max-width: 251px;
+    border: 1px solid #000;
+}
